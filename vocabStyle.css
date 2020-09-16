@@ -1,0 +1,73 @@
+p {
+	font-family: Arial, Sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+}
+h1 {
+	font-family: Arial, Sans-serif;
+	font-weight: bold;
+	color: #d5b7ff;
+}
+input[type=button] {
+	background-color: #00208c;
+	padding: 5px 32px;
+	border: 5px solid blue;
+	border-radius: 8px;
+	font-family: Arial, Sans-serif;
+	font-weight: bold;
+	transition-duration: 0.4s;
+	color: white;
+}
+input[type=button]:hover {
+	background-color: #a3f5ff;
+	color: #000000;
+}
+input[type=button]:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+	background-color: #00208c;
+	color: white;
+}
+.filing {
+	text-align: center;
+	transition-duration: 0.4s;
+	float: right;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+input[type=button].deletes {
+	color: red;
+	border-color: red;
+}
+.dropdown-content {
+	border: 5px solid yellow;
+	border-radius: 5px;
+	transition-duration: 0.4s;
+}
+.showsStats {
+	text-align: center;
+	float: none;
+}
+table {
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+table, td, th {
+	border: 3px solid white;
+	border-collapse: collapse;
+	padding: 10px;
+	text-align: center;
+	font-family: Arial, Sans-serif;
+	font-weight: bold;
+}
+body {
+	background-color: #061144;
+	width: 100%;
+	float: left;
+	transition-duration: 0.4s;
+}

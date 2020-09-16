@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>THE VOCABULARY TEST</title>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="vocabStyle.css">
+</head>
+<h1>Welcome to this self-tester</h1>
+<script src="vocabJS.js"></script>
+<body onkeydown="keyDown(event)">
+<div id="startScreen">
+  <input id="newBoxButton" type="button" value="add word" onClick="createAbox()">
+  <input id="go" type="button" value="take test" onClick="takeTest()">
+  <div class="filing">
+    <input id="save" type="button" value="save words" onClick="saveWords()">
+    <div id="saveOptions" hidden class="dropdown-content">
+      <input type="button" value="save to short-term browser storage" onClick="saveToBrowser()">
+      <br>
+      <input type="button" value="save to files" onClick="saveToFiles()">
+    </div>
+    <br><br>
+    <div id="menuParent">
+    <input type="button" onclick="getWordList()" value="import words">
+      <div id="wordlists" hidden>
+        
+      </div>
+    </div>
+  </div>
+  <div id="statsWindow" class="showsStats">
+    <h1>Stats for Previous Run</h1>
+    <table id="allWords">
+      <tr>
+	<th>Word</th>
+	<th>Meaning</th>
+        <th>Attempts</th>
+        <th>Correct</th>
+        <th>Overall %</th>
+	<th>Delete</th>
+      </tr>
+      <tr id="block0">
+        <td><input id="word0" type="text" value="" placeholder="word"></td>
+        <td><input id="meaning0" type="text" value="" placeholder="meaning"></td>
+        <td id="tries0">0</td>
+        <td id="correct0">0</td>
+        <td id="percentage0">-</td>
+	<td><input type="button" class="deletes" value="X" onClick="deleteWord(0)" id="deleter0"></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+<div id=testScreen hidden>
+  <input id="check" type="button" value="check answer" onClick="checkAnswer()">
+  <input id="editWords" type="button" value="change your words" onClick="changeWords()">
+  <input id="next" type="button" value="next word" onClick="nextWord()" disabled>
+  <br>
+  <br>
+  <input id="testWord" type="text" disabled>
+  <br>
+  <br>
+  <input id="answer" type="text" placeholder="Type answer here...">
+  <br>
+  <br>
+  <input id="result" type="text" disabled>
+  <p id="total%">Overall: 100%</p>
+</div>
+</body>
+</html>
